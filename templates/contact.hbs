@@ -1,11 +1,19 @@
-<div class="container">
-  <nav class='navbar navbar-default' role='navigation'>
-    <ul class='nav navbar-nav'>
-      <li>{{#link-to 'posts'}}Posts{{/link-to}}</li>
-      <li>{{#link-to 'about'}}About{{/link-to}}</li>
-      <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
-    </ul>
-  </nav>
+
 
 <h1>Contact</h1>
-</div>
+<p>Get in touch:</p>
+<ul>
+   <li>{{#link-to 'phone'}}Phone{{/link-to}}</li>
+    <li>{{#link-to 'email'}}Email{{/link-to}}</li>
+
+</ul>
+
+{{#if messageSent}}
+  <p>
+    Thank you. Your message has been sent.
+  </p>
+{{else}}
+
+<p>or, <a href="#" {{action 'sendMessage'}}>click here</a> to send a secret message</p>
+{{/if}}
+{{outlet}}
