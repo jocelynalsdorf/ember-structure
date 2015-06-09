@@ -4,7 +4,7 @@
     <ul>
     {{#each}}
       <li>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</li>
-    {{/each}}
-    
-      
+    {{/each}}  
     </ul>
+
+<button class="btn"><a href="#" {{action 'sortByTitle'}}>Sort By</a></button>
