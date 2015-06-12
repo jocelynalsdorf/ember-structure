@@ -9,26 +9,32 @@
 	</div>
 
 	<div class="form-group">
-	<label for="body">Body</label>
-		{{textarea id="body" rows="15" class="form-control" value=body}}
+	<label for="author">Author</label>
+		{{input id="author" class="form-control" value=author}}
 	</div>
+
+	<div class="form-group">
+	<label for="description">Description</label>
+		{{textarea id="description" rows="5" class="form-control" value=description}}
+	</div>
+
 <button class="btn btn-primary" {{action 'save'}}>Save</button>
 </form>
 
 {{else}}
 
-<p>{{body}}</p>
+<p>{{description}}</p>
 <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
 <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 
 {{/if}}
 
-<h2>Comments</h2>
+<h2>Answers</h2>
 
-{{#each comments}}
+{{#each answers}}
 	<p>{{text}}</p>
 {{/each}}
 
-<p>{{#link-to 'new-comment' this.id class="btn btn-default"}}New Comment {{/link-to}}</p>
+<p>{{#link-to 'new-answer' this.id class="btn btn-default"}}New Answer {{/link-to}}</p>
 
 {{outlet}}

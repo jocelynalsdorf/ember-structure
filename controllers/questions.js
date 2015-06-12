@@ -1,4 +1,4 @@
-Blogger.PostsController = Ember.ArrayController.extend({
+Quiz.QuestionsController = Ember.ArrayController.extend({
 	actions: {
 		sortByTitle: function() {
 			this.set('sortProperties', ['title']);

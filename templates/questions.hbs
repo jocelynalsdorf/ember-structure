@@ -1,0 +1,11 @@
+
+<h1>I heart Quizzes</h1>
+
+    <ul>
+    {{#each}}
+      <li>{{#link-to 'question' this.id}}{{title}}{{/link-to}}</li>
+    {{/each}}
+    </ul>
+
+<button class="btn"><a href="#" {{action 'sortByTitle'}}>Sort By</a></button>
+<p>{{#link-to 'new-question' classNames="btn btn-primary"}}New Question{{/link-to}}</p>
